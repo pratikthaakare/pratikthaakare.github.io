@@ -6,10 +6,10 @@
     <title>Portfolio Website</title>
     <style>
         :root {
-            --bg-color: #ffffff;
+            --bg-color: #6d6a6a;
             --text-color: #1a1a1a;
             --accent-color: #2d4b8e;
-            --nav-bg: #f5f5f5;
+            --nav-bg: #6d6a6a;
         }
 
         .dark-mode {
@@ -168,14 +168,14 @@
 <body>
     <nav>
         <div class="container nav-content">
-            <div class="logo">RZ</div>
+            <div class="logo">PR</div>
             <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#case-studies">Case Studies</a>
-                <a href="#experiments">Experiments</a>
+                <a href="#home">Homepage</a>
+                <a href="#projects">Projects</a>
+                <a href="#clients">Clients</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
         </div>
     </nav>
 
@@ -188,8 +188,9 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Interactive Front-end Developer</h1>
-                <p>Creating engaging digital experiences through clean and efficient code.</p>
+                <p>Pratik Thakare</p>
+                <h1>Cypress Automation Engineer</h1>
+                <p>"Crafting Digital Excellence | Automation Engineer | QA Specialist".</p>
                 <a href="#contact" class="cta-button">About Me →</a>
             </div>
         </div>
@@ -209,7 +210,7 @@
         
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-            themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️ Light Mode ' : '🌙 Dark Mode';
         });
 
         // Smooth Scroll for Navigation Links
@@ -229,7 +230,7 @@
             const y = e.clientY / window.innerHeight;
 
             shapes.forEach(shape => {
-                const speed = 20;
+                const speed = 10;
                 const xPos = (x * speed);
                 const yPos = (y * speed);
                 shape.style.transform = `translate(${xPos}px, ${yPos}px)`;
